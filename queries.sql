@@ -1,6 +1,6 @@
 SELECT
     c.login,
-    COUNT(1) ordersQnt
+    COUNT(*) ordersQnt
 FROM "Couriers" c
     JOIN "Orders" o ON o."courierId" = c.id
 WHERE o."inDelivery" = TRUE
